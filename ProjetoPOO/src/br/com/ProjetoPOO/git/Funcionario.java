@@ -1,52 +1,68 @@
 package br.com.ProjetoPOO.git;
 
-public class Funcionario  extends Pessoa implements Funcionario_interface  {
+import java.util.Scanner;
+
+public class Funcionario implements Interface   {
 
 	private int id;
-	private String funcao;
+	private char funcao;
 	private float salario;
 	private float jornada_de_trabalho;
 	
+	Scanner s1 = new Scanner(System.in);
 	
+	 
+	@Override
+	public void inserir() {
+		System.out.println("Ensira o id:");
+		this.setId(s1.nextInt());
+		System.out.println("Função exercido  P para pedreiro  E para engenheiro:");
+		this.setFuncao(s1.next().charAt(0));
+	    funcao();
+		
+	}
+	@Override
+	public void alterar() {
+		 
+		 
+
+		}
+		
 	
 	@Override
-	public void menu() {
-		int x;
-		do {
-              
-			x = 0;
-           System.out.println("______________________________________________________________");
-           System.out.println("                      ||Menu Funcionario||                 ");
-			System.out.println("cadastro digite :0");
-			System.out.println("status digite :1");
-			System.out.println("voltar digite:2");
-			x = s1.nextInt();
-
-			switch (x) {
-
-			case 0:
-				 
-				break;
-			case 1:
-				 
-				break;
-			case 2:
-			 
-				break;
-
-			}
-		} while (x != 2);
-
+	public void listar() {
+	 System.out.println("Id:"+this.getId());
+	 System.out.println("função:"+this.getFuncao());
+	 System.out.println("salario:"+this.getSalario());
+	 System.out.println("Jornada da Trabalho:"+this.getJornada_de_trabalho());
+	 
+		
+	}
+	@Override
+	public void excluir() {
+		this.setId(0);
+	 	this.setJornada_de_trabalho(0);
+		this.setSalario(0);
+		 
+		
 	}
 	
-	
 
 	
 	
+	public void funcao(){
+		
+		if( this.getFuncao() == 'p'){
+			this.setSalario(1500);
+			this.setJornada_de_trabalho(6.30f);
+			
+		}else if(this.getFuncao() == 'f') {
+			this.setSalario(4243324);
+			this.setJornada_de_trabalho(1);
+		}
 	
 	
-	
-	
+	}
 	
 	
 	
@@ -56,10 +72,10 @@ public class Funcionario  extends Pessoa implements Funcionario_interface  {
 	private void setId(int id) {
 		this.id = id;
 	}
-	private String getFuncao() {
+	private char getFuncao() {
 		return funcao;
 	}
-	private void setFuncao(String funcao) {
+	private void setFuncao(char funcao) {
 		this.funcao = funcao;
 	}
 	private float getSalario() {

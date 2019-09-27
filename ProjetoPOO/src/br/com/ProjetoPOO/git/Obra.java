@@ -11,33 +11,50 @@ public class Obra {
 
 		Scanner s2 = new Scanner(System.in);
 		
-		System.out.println("bla bla bla bla");
-		 
+		
 		int x;
-		do {
-
-			x = 0;
-			System.out.println("______________________________________________________________");
-			System.out.println("                      ||Menu||                 ");
-			System.out.println("cadastro Pessoa:0");
-			System.out.println("cadastro Funcionario:1");
-			System.out.println("sair digite:2");
-			x=s2.nextInt();
+	  do {
+			 x=0;
+			    System.out.println("______________________________________________________________");
+		        System.out.println("                      ||Menu||                 ");
+				System.out.println("Cadastra:1");
+				System.out.println("Alterar:2");
+				System.out.println("Listar:3");
+				System.out.println("Excluir:4");
+				System.out.println("Sair:5");
+				x=s2.nextInt();
+	  
 			switch (x) {
-
-			case 0:
-				p1.menu();
-				break;
 			case 1:
-				f1.menu();
+				p1.inserir();
+				f1.inserir();
 				break;
 			case 2:
-				System.out.println("Fim...");
+				p1.alterar();
 				break;
+				
+			case 3:
+				p1.listar();
+				f1.listar();
+				break;
+			case 4:
+				p1.excluir();
+				f1.excluir();
+				break;
+			case 5:
+				System.out.println("FIM...................."); 
+				break;
+					
 
+			default:
+				System.out.println("ERRO.opicao invalida");
+				break;
 			}
-		} while (x != 2);
-
+		  
+	  }while(x != 5);
+		
+		 
+	 
 	}
 
 	 
