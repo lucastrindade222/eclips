@@ -6,7 +6,9 @@ public class Obra {
 
 	public static void main(String[] args) {
 
-		Pessoa p1 = new Pessoa();
+		//ERRO 
+		
+		/*Pessoa p1 = new Pessoa();
 		Funcionario f1 = new Funcionario();
 
 		Scanner s2 = new Scanner(System.in);
@@ -56,7 +58,7 @@ public class Obra {
 		 
 	 
 	}
-
+*/
 	 
 
 }

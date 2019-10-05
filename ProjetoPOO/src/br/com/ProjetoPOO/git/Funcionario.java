@@ -2,7 +2,7 @@ package br.com.ProjetoPOO.git;
 
 import java.util.Scanner;
 
-public class Funcionario implements Interface   {
+public class Funcionario  implements Interface   {
 
 	private int id;
 	private char funcao;
@@ -14,9 +14,8 @@ public class Funcionario implements Interface   {
 	 
 	@Override
 	public void inserir() {
-		System.out.println("Ensira o id:");
-		this.setId(s1.nextInt());
-		System.out.println("Função exercido  P para pedreiro  E para engenheiro:");
+	
+		System.out.println("Função exercido \n\n °P para pedreiro \n °E para engenheiro civil\n °C para carpinteiro ");
 		this.setFuncao(s1.next().charAt(0));
 	    funcao();
 		
@@ -54,14 +53,21 @@ public class Funcionario implements Interface   {
 		
 		if( this.getFuncao() == 'p'){
 			this.setSalario(1500);
-			this.setJornada_de_trabalho(6.30f);
+			this.setJornada_de_trabalho(8f);
 			
-		}else if(this.getFuncao() == 'f') {
-			this.setSalario(4243324);
-			this.setJornada_de_trabalho(1);
+		}else if(this.getFuncao() == 'e') {
+			this.setSalario(7.546f);
+			this.setJornada_de_trabalho(4f);
+		}else if(this.getFuncao()=='c'){
+			this.setSalario(1200);
+			this.setJornada_de_trabalho(8f);
 		}
 	
 	
+	}
+	
+	public void codeid(int c) {
+		this.setId(c);
 	}
 	
 	

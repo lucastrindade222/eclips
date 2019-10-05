@@ -15,10 +15,10 @@ public class Pessoa extends Funcionario implements Interface {
 
 	@Override
 	public void inserir() {
-		System.out.println("______________________________________________________________");
-        System.out.println("                      ||Cadastro||                 ");
+		
+        System.out.println("                      ||Cadastro||                \n ");
         System.out.println("informe o nome:");
-		 
+		this.setNome(s1.next());
 		System.out.println("informe a data de nacimento:");
 		this.setData_de_nacimento(s1.next());
 		System.out.println("informe o CPF:");
@@ -77,7 +77,7 @@ public class Pessoa extends Funcionario implements Interface {
 	@Override
 	public void excluir() {
 		System.out.println("Excluindo......");
-		
+		this.setNome(null);
 		this.setData_de_nacimento(null);
 		this.setCpf(0);
 		System.out.println("Finalizado");
