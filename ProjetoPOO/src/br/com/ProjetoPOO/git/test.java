@@ -40,6 +40,7 @@ public class test {
 				f[c].inserir();
 				f[c].codeid(c);
 				c++;
+				 
 				break;
 			case 2:
 			   p[c-1].alterar();
@@ -101,7 +102,7 @@ public class test {
 	  }while(x != 5);
 		
 		
-		 
+		
 
 	}
 
