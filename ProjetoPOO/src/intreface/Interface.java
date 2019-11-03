@@ -1,4 +1,4 @@
-package br.com.ProjetoPOO.git;
+package intreface;
 
 public interface Interface {
 	
