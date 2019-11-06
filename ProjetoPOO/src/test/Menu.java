@@ -44,11 +44,11 @@ public class Menu {
 
 		System.out.println("______________________________________________________________");
 		System.out.println("                      ||Menu Funcionario||                 ");
-		System.out.println("Cadastra:1");
-		System.out.println("Alterar:2");
-		System.out.println("Listar:3");
-		System.out.println("Excluir:4");
-		System.out.println("Sair:5");
+		System.out.println("Cadastra:[1]");
+		System.out.println("Alterar: [2]");
+		System.out.println("Listar:  [3]");
+		System.out.println("Excluir: [4]");
+		System.out.println("Sair:    [5]");
     
 		x = s2.nextInt();
 
@@ -71,8 +71,8 @@ public class Menu {
 				
 				aux = 0;
 
-				System.out.println("altera o utino da lista:1");
-				System.out.println("altera o outro:2");
+				System.out.println("altera o utino da lista:[1]");
+				System.out.println("altera o outro:[2]");
 				aux = s2.nextInt();
 
 				if (aux == 1) {
@@ -92,9 +92,9 @@ public class Menu {
 			case 3:
 
 
-				System.out.println("Listar o ultino enserido:1");
-				System.out.println("Listar outros:2");
-				System.out.println("Listar todos os funcionarios cadastrados:3");
+				System.out.println("Listar o ultino enserido:[1]");
+				System.out.println("Listar outros:[2]");
+				System.out.println("Listar todos os funcionarios cadastrados:[3]");
 				aux = s2.nextInt();
 
 				if (aux == 1) {
@@ -112,9 +112,9 @@ public class Menu {
 
 				} else if(aux == 3) {
 					
-				 for (int i = 0; i < f1.size(); i++) {
+				 for (Funcionario fi : f1 ) {
 					
-					 f1.get(i).listar();
+					 fi.listar();
 				}
 					
 				}
@@ -125,20 +125,37 @@ public class Menu {
 			case 4:
 				aux = 0;
 
-				System.out.println("Excluir o altual:1");
-				System.out.println("Excluir o outro:2");
+				System.out.println("Excluir o altual:[1]");
+				System.out.println("Excluir o outro:[2]");
 				aux = s2.nextInt();
 
 				if (aux == 1) {
+					
 					f1.get(id-1).excluir();; 
 					 
+					
+		    for(int x=id-1;x== f1.size() ;x++) {
+						
+						
+						f1.get(x);
+						id--;
+		    }	
+					
+					
 				} else if (aux == 2) {
 					aux = 0;
 					System.out.println("informe  o ID?");
 					aux = s2.nextInt();
 					 
 					f1.get(aux).excluir();
-					   
+					  
+					for(int x=aux;x== f1.size() ;x++) {
+						
+						
+						f1.get(x);
+						id--;
+					}
+					
 
 				}
 				 menufuncionario();

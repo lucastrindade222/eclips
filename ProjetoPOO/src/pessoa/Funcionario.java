@@ -23,7 +23,7 @@ public class Funcionario extends Pessoa implements Interface   {
 		System.out.println("______________________________________________________________");
 		System.out.println("                      ||Cadastra||              \nID["+this.getId()+"]\n");
 		System.out.println("inforne o nome seu nome:"); 
-		this.setNome(s1.next());
+		this.setNome(s1.nextLine());
 		System.out.println("informe o CPF:");
 		this.setCpf(s1.nextFloat());
 		System.out.println("informe a data de nacimento");
@@ -46,13 +46,13 @@ public class Funcionario extends Pessoa implements Interface   {
 		System.out.println("______________________________________________________________");
 		System.out.println("                      ||Altera||              \nID"+this.getId()+"\n");
 		System.out.println(" o que voce deseja altera?");
-		System.out.println(" nome digite:1");
-		System.out.println(" CPF  digite:2");
-		System.out.println(" Data de nacimento  digite:3");
-		System.out.println(" Funçao  digite:4");
-		System.out.println(" salario: digite:5");
-		System.out.println(" jornada de Trabalho  digite:6");
-		System.out.println(" Voltar ao Menu:7");
+		System.out.println(" \n  nome digite:[1]");
+		System.out.println("  CPF  digite:[2]");
+		System.out.println("  Data de nacimento digite:[3]");
+		System.out.println("  Funçao  digite:[4]");
+		System.out.println("  salario: digite:[5]");
+		System.out.println("  jornada de Trabalho digite:[6]");
+		System.out.println("  Voltar ao Menu:[7]");
 		i=s1.nextInt();
 		
 		
@@ -60,7 +60,7 @@ public class Funcionario extends Pessoa implements Interface   {
 		case 1:
 			
 			System.out.println("encira o novo nome: ");
-			this.setNome(s1.next());
+			this.setNome(s1.nextLine());
 			System.out.println("Concluido com suseso ");
 			System.out.println(".....................................");
 		 
